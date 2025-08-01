@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dijital Saat</title>
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: #232946;
+        }
+        
+        #saat {
+            color: #fff;
+            font-size: 4em;
+            background: #393e46;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px #0005;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="saat"></div>
+    <script>
+        function saatGuncelle() {
+            const saat = new Date();
+            document.getElementById("saat").textContent =
+                saat.toLocaleTimeString('tr-TR');
+        }
+        setInterval(saatGuncelle, 1000);
+        saatGuncelle();
+    </script>
+</body>
+
+</html>
